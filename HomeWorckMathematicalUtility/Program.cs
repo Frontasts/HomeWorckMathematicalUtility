@@ -14,25 +14,26 @@ namespace HomeWorckMathematicalUtility
             Console.WriteLine();
 
             Random random = new Random();
-            double x = random.Next(0, 1000);
-            double y = random.Next(0, 1000);
 
-            double sum = MathUtility.Add(x, y);
-            Console.WriteLine($"{x} + {y} = {sum}");
+            double firstNumber = random.Next(0, 1000);
+            double secondNumber = random.Next(0, 1000);
 
-            double diff = MathUtility.Subtract(x, y);
-            Console.WriteLine($"{x} - {y} = {diff}");
+            double sum = MathUtility.Add(firstNumber, secondNumber);
+            Console.WriteLine($"{firstNumber} + {secondNumber} = {sum}");
 
-            double prod = MathUtility.Multiply(x, y);
-            Console.WriteLine($"{x} * {y} = {prod}");
+            double difference = MathUtility.Subtract(firstNumber, secondNumber);
+            Console.WriteLine($"{firstNumber} - {secondNumber} = {difference}");
 
-            double quot = MathUtility.Divide(x, y);
-            Console.WriteLine($"{x} / {y} = {quot}");
+            double product = MathUtility.Multiply(firstNumber, secondNumber);
+            Console.WriteLine($"{firstNumber} * {secondNumber} = {product}");
+
+            double quotient = MathUtility.Divide(firstNumber, secondNumber);
+            Console.WriteLine($"{firstNumber} / {secondNumber} = {quotient}");
 
             Console.WriteLine();
 
-            double bad = MathUtility.Divide(x, 0);
-            Console.WriteLine($"Результат деления на 0: {bad}");
+            double badQuotient = MathUtility.Divide(firstNumber, 0);
+            Console.WriteLine($"Результат деления на 0: {badQuotient}");
         }
     }
 }
